@@ -72,42 +72,5 @@
                 }
             }
         }
-    },
-    "sayHi": {
-        "window": {
-            "url": "\\components\\sayHi\\sayHi.html",
-            "frame": false,
-            "resizable": true,
-            "autoShow": true,
-            "defaultTop": "center",
-            "defaultLeft": "center",
-            "defaultWidth": 800,
-            "defaultHeight": 600
-        },
-        "component": {
-            "type": "sayHi"
-        },
-        "foreign": {
-            "services": {
-                "workspaceService": {
-                    "isArrangable": true
-                },
-                "launcherService": {
-                    "inject": false
-                }
-            },
-            "components": {
-                "App Launcher": {
-                    "launchableByUser": true
-                },
-                "Window Manager": {
-                    "FSBLHeader": true,
-                    "persistWindowState": true
-                },
-                "Toolbar": {
-                    "iconClass": "sayHi"
-                }
-            }
-        }
     }
 }

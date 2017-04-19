@@ -17,7 +17,7 @@ function setCustomerIndex(accountNumber){
 	saveState();
 }
 
-var advancedIsRunning=true;
+var advancedIsRunning=false;
 
 //STEP 6
 function saveState(){
@@ -71,7 +71,6 @@ function launchAccountDetailAdvanced(accountNumber){
 			launchAccountDetail(accountNumber);
 		}else{
 			FSBL.Clients.RouterClient.transmit(descriptor.name, accountNumber);
-			console.log("descriptor.name=",descriptor.name)
 		}
 	});
 }
@@ -133,7 +132,7 @@ function renderPage(){
 document.addEventListener("DOMContentLoaded", function () {
 	FSBL.useAllClients();
 	FSBL.initialize(function(){
-		// alert(FSBL.Clients.WindowClient.options.customData.component["account-type"]);
+		//alert(FSBL.Clients.WindowClient.options.customData.component["account-type"]);
 		FSBL.Clients.WindowClient.setWindowTitle("Account List");
 		renderPage();
 		communicateBetweenComponents(); // --> Step 4

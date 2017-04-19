@@ -1,4 +1,4 @@
-console.log("in accountDetail.js")
+
 function setAccountNumber(accountNumber){
 	$("input[name=accountNumber").val(accountNumber);
 	FSBL.Clients.WindowClient.setWindowTitle(accountNumber);
@@ -36,23 +36,9 @@ function communicateBetweenComponents(){
 
 // STEP 3
 function listenForCustomer(){
-	console.log("in listenForCustomer and FSBL.Clients.WindowClient.options.name=", FSBL.Clients.WindowClient.options.name)
 	FSBL.Clients.RouterClient.addListener(FSBL.Clients.WindowClient.options.name, function(err, response){
-		console.log("in AddListender function of listenForCustomer")
 		if(err) return;
 		setAccountNumber(response.data);
-	})
-}
-
-function listenForHi(){
-	console.log("in listenForHi and (FSBL.Clients.WindowClient.options.name=",FSBL.Clients.WindowClient.options.name )
-	FSBL.Clients.RouterClient.addListener(FSBL.Clients.WindowClient.options.name, function(err, response){
-		if (err) return;
-		console.log("listened! and response =", response);
-		alert(response.data)
-		var h = document.createElement("H1");
-		var t = document.createTextNode(response.data);
-		h.appendChild(t);
 	})
 }
 
