@@ -17,7 +17,7 @@ function setCustomerIndex(accountNumber){
 	saveState();
 }
 
-var advancedIsRunning=false;
+var advancedIsRunning=true;
 
 //STEP 6
 function saveState(){
@@ -59,9 +59,11 @@ function launchAccountDetailAdvanced(accountNumber){
 	advancedIsRunning=true;
 	var alive=false;
 	FSBL.Clients.LauncherClient.getActiveDescriptors(function(err, response){
+		console.log("in getActiveDescriptors and response=",response);
 		advancedIsRunning=false;
-		for(let id in response.data){
-			var descriptor=response.data[id];
+		for(let id in response){
+			console.log("response=", response);
+			var descriptor=response[id];
 			if(descriptor.customData.component.type=="accountDetail"){
 				alive=true;
 				break;
@@ -71,6 +73,7 @@ function launchAccountDetailAdvanced(accountNumber){
 			launchAccountDetail(accountNumber);
 		}else{
 			FSBL.Clients.RouterClient.transmit(descriptor.name, accountNumber);
+			console.log("descriptor.name=",descriptor.name)
 		}
 	});
 }
@@ -132,7 +135,7 @@ function renderPage(){
 document.addEventListener("DOMContentLoaded", function () {
 	FSBL.useAllClients();
 	FSBL.initialize(function(){
-		//alert(FSBL.Clients.WindowClient.options.customData.component["account-type"]);
+		// alert(FSBL.Clients.WindowClient.options.customData.component["account-type"]);
 		FSBL.Clients.WindowClient.setWindowTitle("Account List");
 		renderPage();
 		communicateBetweenComponents(); // --> Step 4

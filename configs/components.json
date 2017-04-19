@@ -61,7 +61,7 @@
             },
             "components": {
                 "App Launcher": {
-                    "launchableByUser": true
+                    "launchableByUser": false
                 },
                 "Window Manager": {
                     "FSBLHeader": true,
@@ -69,6 +69,43 @@
                 },
                 "Toolbar": {
                     "iconClass": "accountDetail"
+                }
+            }
+        }
+    },
+    "sean": {
+        "window": {
+            "url": "\\components\\sean\\sean.html",
+            "frame": false,
+            "resizable": true,
+            "autoShow": true,
+            "defaultTop": "center",
+            "defaultLeft": "center",
+            "defaultWidth": 800,
+            "defaultHeight": 600
+        },
+        "component": {
+            "type": "sean"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcherService": {
+                    "inject": true
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": true
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "persistWindowState": true
+                },
+                "Toolbar": {
+                    "iconClass": "sean"
                 }
             }
         }
