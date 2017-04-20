@@ -28,6 +28,7 @@
                 },
                 "Window Manager": {
                     "FSBLHeader": true,
+                    "showLinker": true,
                     "persistWindowState": true
                 },
                 "Toolbar": {
@@ -65,6 +66,7 @@
                 },
                 "Window Manager": {
                     "FSBLHeader": true,
+                    "showLinker": true,
                     "persistWindowState": true
                 },
                 "Toolbar": {
@@ -102,10 +104,49 @@
                 },
                 "Window Manager": {
                     "FSBLHeader": true,
+                    "showLinker": true,
                     "persistWindowState": true
                 },
                 "Toolbar": {
                     "iconClass": "sean"
+                }
+            }
+        }
+    },
+    "accountStatement": {
+        "window": {
+            "url": "\\components\\accountStatement\\accountStatement.html",
+            "frame": false,
+            "resizable": true,
+            "autoShow": true,
+            "defaultTop": "center",
+            "defaultLeft": "center",
+            "defaultWidth": 800,
+            "defaultHeight": 600
+        },
+        "component": {
+            "type": "accountStatement"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcherService": {
+                    "inject": false
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": true
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "showLinker": true,
+                    "persistWindowState": true
+                },
+                "Toolbar": {
+                    "iconClass": "accountStatement"
                 }
             }
         }
