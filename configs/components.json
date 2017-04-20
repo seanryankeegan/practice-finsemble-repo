@@ -150,5 +150,74 @@
                 }
             }
         }
+    },
+    "Chart": {
+        "window": {
+            "url": "http://finsemble.chartiq.com/fin/components/premium/chart/chartiq-desktop.html",
+            "resizable":true,
+            "defaultTop": 200,
+            "defaultLeft": 100,
+            "defaultWidth": 640,
+            "defaultHeight": 480,
+            "minWidth": 180,
+            "minHeight": 400
+        },
+        "component": {
+            "type": "Chart"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcherService": {
+                    "inject": false
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": true
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "showLinker": true
+                }
+            }
+        }
+    },
+    "Chat": {
+        "window": {
+            "url": "http://finsemble.chartiq.com/fin/components/premium/chat/chat.html",
+            "name": "mainChat",
+            "resizable":true,
+            "defaultTop": 200,
+            "defaultLeft": 100,
+            "defaultWidth": 480,
+            "defaultHeight": 600,
+            "minWidth": 180,
+            "minHeight": 400
+        },
+        "component": {
+            "type": "Chat"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcherService": {
+                    "inject": false
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": false
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "showLinker": true
+                }
+            }
+        }
     }
 }
