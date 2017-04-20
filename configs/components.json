@@ -154,7 +154,7 @@
     "Chart": {
         "window": {
             "url": "http://finsemble.chartiq.com/fin/components/premium/chart/chartiq-desktop.html",
-            "resizable":true,
+            "resizable": true,
             "defaultTop": 200,
             "defaultLeft": 100,
             "defaultWidth": 640,
@@ -189,7 +189,7 @@
         "window": {
             "url": "http://finsemble.chartiq.com/fin/components/premium/chat/chat.html",
             "name": "mainChat",
-            "resizable":true,
+            "resizable": true,
             "defaultTop": 200,
             "defaultLeft": 100,
             "defaultWidth": 480,
@@ -215,6 +215,78 @@
                 },
                 "Window Manager": {
                     "FSBLHeader": true,
+                    "showLinker": true
+                }
+            }
+        }
+    },
+    "salesforceHome": {
+        "window": {
+            "url": "https://login.salesforce.com/",
+            "frame": false,
+            "resizable": true,
+            "autoShow": true,
+            "defaultTop": "center",
+            "defaultLeft": "center",
+            "defaultWidth": 800,
+            "defaultHeight": 600
+        },
+        "component": {
+            "type": "salesforceHome"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcherService": {
+                    "inject": false
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": true
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "persistWindowState": true
+                },
+                "Toolbar": {
+                    "iconClass": "salesforceHome"
+                }
+            }
+        }
+    },
+    "FinsembleDocumentation": {
+        "window": {
+            "url": "http://www.finsemble.com",
+            "resizable": true,
+            "alwaysOnTop": false,
+            "autoShow": true,
+            "defaultTop": "center",
+            "defaultLeft": "center",
+            "defaultWidth": 800,
+            "defaultHeight": 600
+        },
+        "component": {
+            "type": "FinsembleDocumentation"
+        },
+        "foreign": {
+            "services": {
+                "workspaceService": {
+                    "isArrangable": true
+                },
+                "launcher": {
+                    "inject": true
+                }
+            },
+            "components": {
+                "App Launcher": {
+                    "launchableByUser": true
+                },
+                "Window Manager": {
+                    "FSBLHeader": true,
+                    "persistWindowState": false,
                     "showLinker": true
                 }
             }
